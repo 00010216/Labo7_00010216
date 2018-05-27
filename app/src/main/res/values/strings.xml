@@ -2,4 +2,6 @@
     <string name="app_name">Room</string>
     <string name="username">Username</string>
     <string name="log_in">Log In</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
