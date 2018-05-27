@@ -1,7 +1,6 @@
 package com.example.kcruz.room.fragments;
 
 import android.app.Activity;
-import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
@@ -12,8 +11,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import com.example.kcruz.room.R;
-
-import java.util.List;
 
 public class LogInFragment extends android.support.v4.app.Fragment {
     Activity activity;
@@ -35,7 +32,7 @@ public class LogInFragment extends android.support.v4.app.Fragment {
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Prueba frag = new Prueba();
+                DrawerFragment frag = new DrawerFragment();
                 //frag.setArguments(bundle);
 
                 FragmentManager fragmentManager = getFragmentManager();
