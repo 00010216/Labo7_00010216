@@ -9,7 +9,7 @@ import android.widget.Button;
 
 import com.example.kcruz.room.fragments.LogInFragment;
 
-public class MainActivity extends AppCompatActivity implements LogInFragment.LoginClickListener{
+public class MainActivity extends AppCompatActivity {
     Button login;
 
     @Override
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity implements LogInFragment.Log
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        //inicia fragmento Log In en la acitvidad
         LogInFragment frag = new LogInFragment();
         //frag.setArguments(bundle);
 
@@ -25,10 +26,5 @@ public class MainActivity extends AppCompatActivity implements LogInFragment.Log
 
         fragmentTransaction.replace(R.id.frameLayout, frag);
         fragmentTransaction.commit();
-    }
-
-    @Override
-    public void onLogInClick(View v) {
-
     }
 }
