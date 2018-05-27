@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,20 +26,24 @@ public class LogInFragment extends android.support.v4.app.Fragment {
 
     }
 
-    public interface LoginClickListener{
-        public void onLogInClick(View v);
-    }
-
-    LoginClickListener mlistener;
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_log_in,container,false);
         login = view.findViewById(R.id.btn_login);
+
+        //dandole funcionalidad al button login para que abra el perfil de usuario
         login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            mlistener.onLogInClick(v);
+                Prueba frag = new Prueba();
+                //frag.setArguments(bundle);
+
+                FragmentManager fragmentManager = getFragmentManager();
+                FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                fragmentTransaction.replace(R.id.frameLayout, frag);
+                fragmentTransaction.commit();
+
             }
         });
         return view;
