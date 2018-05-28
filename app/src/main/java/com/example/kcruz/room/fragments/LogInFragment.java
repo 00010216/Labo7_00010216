@@ -1,6 +1,7 @@
 package com.example.kcruz.room.fragments;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
@@ -44,5 +45,11 @@ public class LogInFragment extends android.support.v4.app.Fragment {
             }
         });
         return view;
+    }
+
+    @Override
+    public void onResume() {
+        getActivity().setTitle(R.string.app_name);
+        super.onResume();
     }
 }
