@@ -55,6 +55,26 @@ public class DrawerFragment extends Fragment {
                 drawer.closeDrawers();
 
                 switch(item.getItemId()){
+                    case R.id.item1:
+                        NotesListFragment frag = new NotesListFragment();
+                        //frag.setArguments(bundle);
+
+                        FragmentManager fragmentManager = getFragmentManager();
+                        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+                        fragmentTransaction.replace(R.id.frameLayout, frag);
+                        fragmentTransaction.commit();
+                        break;
+                    case R.id.item2:
+                        CategoryListFragment frag2 = new CategoryListFragment();
+                        //frag.setArguments(bundle);
+
+                        FragmentManager fragmentManager2 = getFragmentManager();
+                        FragmentTransaction fragmentTransaction2 = fragmentManager2.beginTransaction();
+
+                        fragmentTransaction2.replace(R.id.frameLayout, frag2);
+                        fragmentTransaction2.commit();
+                        break;
                 }
 
                 DrawerLayout drawer = (DrawerLayout) view.findViewById(R.id.drawerLayout);
