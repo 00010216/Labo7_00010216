@@ -11,11 +11,11 @@ import com.example.kcruz.room.R;
 
 import java.util.List;
 
-public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ListViewHolder>{
+public class CustomizeListAdapter extends RecyclerView.Adapter<CustomizeListAdapter.ListViewHolder>{
     private Context context;
     List<String> notes;
 
-    public ListAdapter(Context mContext, List<String> mNotes) {
+    public CustomizeListAdapter(Context mContext, List<String> mNotes) {
         context = mContext;
         notes = mNotes;
     }
